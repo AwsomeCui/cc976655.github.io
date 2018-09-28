@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About CUJE
+title: About
 permalink: /about/
 ---
 
