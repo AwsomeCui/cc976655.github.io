@@ -1,14 +1,38 @@
-auto: true
-
-markdown: rdiscount
-
-highlighter: 'pygments'
-#paginate: 8
-permalink: /:title
-
-name: "崔仪洁的博客"
+# Site settings
 title: 崔仪洁的博客
-description: 念念不忘，必有回响。
-url: https://cc976655.github.io/
-feed: /atom.xml
-author_info: <a href="https://cc976655.github.io/">Cui Yijie</a>
+email: cyj976655@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://cc976655.github.com" # the base hostname & protocol for your site
+
+
+# Sidebar filter
+# Choose 'tag' or 'category' as filter in sidebar.
+filter: 'tag'
+
+
+# Social account
+# twitter:  username
+# weibo:    ID
+github:   cc976655
+# codepen:  username
+# dribbble: username
+
+
+# Comment
+disqus_shortname: cuje
+
+
+# Google Analytics
+# google_analytics: tracking_ID
+
+
+# Build settings
+markdown: kramdown
+sass:
+  style: compressed
+plugins:
+  - jekyll-sitemap

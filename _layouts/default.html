@@ -1,52 +1,29 @@
+---
+layout: compress
+---
 <!DOCTYPE html>
 <html>
-<head>
-    <!--
-    * Author:         BeiYuu
-    * Revised:        CUJE
-    -->
-    <meta charset="utf-8" />
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-    <meta name="author" content="CUJE" />
-    <meta name="renderer" content="webkit">
-    <meta name="description" content="Everything about CUJE" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="/css/default.css" type="text/css" />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="{{ site.feed }}" />
-    <link rel="alternatecss" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml">
-    <script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
-</head>
-<body>
+  {% include head.html %}
+  <body>
+    {% include sidebar.html %}
 
-    <div class="home-menu">
-        <div class="home-icon-con">
-            <a class="home-menu-icon" href="/">CUJE</a>
-            <a class="home-follow" href="#" title="Contact Me">+</a>
+    <main id="main">
+      {{ content }}
+
+      <div class="footer">
+        <div class="container">
+          <p class="footer-entry">All content is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA</a></p>
+		  <!--
+          <p class="footer-entry">Buit with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> and <a href="https://github.com/P233/3-Jekyll" target="_blank">3-Jekyll theme</a> • Hosted on <a href="https://pages.github.com/" target="_blank">Github</a></p>
+		  -->
         </div>
-        <div class="home-contact">
-            <a href="https://github.com/cc976655/" target="_blank" style="margin-left:-5px;"><img src="https://github.com/favicon.ico" alt="" width="22"/></a>
-			<!--
-            <a href="http://www.douban.com/people/23026489/" target="_blank" style="text-align:center;"><img src="http://www.douban.com/favicon.ico" alt="" width="22"/></a>
-			-->
-            <a href="/feed.xml" target="_blank" style="text-align:right"><img src="http://freefavicons.org/download/rss/rss.ico" alt="" width="22"/></a>
-        </div>
-    </div>
+      </div>
+    </main>
 
-    {{ content }}
+    <button id="menu">
+      <span id="menu-icons"></span>
+    </button>
 
-    <script type="text/javascript">
-        $(function(){
-            $('.home-follow').click(function(e){
-                e.preventDefault();
-
-                if($('.home-contact').is(':visible')){
-                    $('.home-contact').slideUp(100);
-                }else{
-                    $('.home-contact').slideDown(100);
-                }
-            });
-        })
-    </script>
-</body>
+    {% include scripts.html %}
+  </body>
 </html>
