@@ -21,5 +21,5 @@ killall Dock
 ```
 
 ## 调整之后的效果图
-![2018-11-20-lunchpad](/assets/img/2018-11-20-liunchpad.jpeg)
+![2018-11-20-lunchpad](/assets/img/2018-11-20-lunchpad.jpeg)
 
