@@ -1,7 +1,8 @@
 # Site settings
 title: 崔仪洁的博客
 email: cyj976655@gmail.com
-description: > 崔仪洁的博客，记录生活的点点滴滴。
+description: > 
+崔仪洁的博客，记录生活的点点滴滴。
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://cc976655.github.com" # the base hostname & protocol for your site
 
