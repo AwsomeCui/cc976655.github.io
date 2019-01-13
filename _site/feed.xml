@@ -4,11 +4,134 @@
     <title>崔仪洁的博客</title>
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 01 Oct 2018 16:58:47 +0800</pubDate>
-    <lastBuildDate>Mon, 01 Oct 2018 16:58:47 +0800</lastBuildDate>
-    <generator>Jekyll v3.8.4</generator>
+    <link>https://cc976655.github.com/</link>
+    <atom:link href="https://cc976655.github.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 20 Nov 2018 13:54:10 +0800</pubDate>
+    <lastBuildDate>Tue, 20 Nov 2018 13:54:10 +0800</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>分享一些自己做菜</title>
+        <description>&lt;h2 id=&quot;喜欢做菜&quot;&gt;喜欢做菜&lt;/h2&gt;
+&lt;p&gt;民以食为天，程序员毫不例外，为了讨好自己的胃，在空闲的时候总想给自己做点好吃的。这个文章就记录一下自己做的“大餐”吧。&lt;/p&gt;
+
+&lt;h3 id=&quot;20181110-中午&quot;&gt;2018.11.10 中午&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/food/2018-11-10-l.jpg&quot; alt=&quot;2018-11-10-l&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;洋葱炒肉丝（肉丝有点粗），搭配阿萨姆奶茶&lt;/center&gt;
+
+&lt;h3 id=&quot;20181110-晚上&quot;&gt;2018.11.10 晚上&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/food/2018-11-10-d.jpg&quot; alt=&quot;2018-11-13-d&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;老母鸡汤，去掉了菊花（羞~(@^_^@)~），人到中年，枸杞必备&lt;/center&gt;
+
+&lt;h3 id=&quot;20181113-晚上&quot;&gt;2018.11.13 晚上&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/food/2018-11-13-d.jpg&quot; alt=&quot;2018-11-13-d&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;毛豆炒肉粒吧（切不好肉丝），搭配老干妈，爽&lt;/center&gt;
+
+&lt;h3 id=&quot;20181114-晚上&quot;&gt;2018.11.14 晚上&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/food/2018-11-14-d.jpg&quot; alt=&quot;2018-11-14-d&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;加班回来，做了个火锅料方便面(╥╯^╰╥)&lt;/center&gt;
+
+&lt;h3 id=&quot;20181117-晚上&quot;&gt;2018.11.17 晚上&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/food/2018-11-17-d.jpg&quot; alt=&quot;2018-11-17-d&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;白菜炒菠菜，青椒炒培根火腿&lt;/center&gt;
+</description>
+        <pubDate>Sun, 18 Nov 2018 07:58:49 +0800</pubDate>
+        <link>https://cc976655.github.com/food/2018/11/18/food-share.html</link>
+        <guid isPermaLink="true">https://cc976655.github.com/food/2018/11/18/food-share.html</guid>
+        
+        <category>Life</category>
+        
+        
+        <category>Food</category>
+        
+      </item>
+    
+      <item>
+        <title>Centos7安装WebRtc打洞服务器Coturn方法</title>
+        <description>&lt;h1 id=&quot;centos7安装webrtc打洞服务器coturn方法&quot;&gt;Centos7安装WebRtc打洞服务器Coturn方法&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;在使用WebRtc时，我们需要打洞服务器来打洞两部设备之间的通信，这里我们采用Coturn库。由于Turn服务器是Stun的一个拓展，Coturn包括了Turn和Stun，所有我们只需要部署Coturn就可以完成WebRtc的打洞环节啦。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;克隆并安装&quot;&gt;克隆并安装&lt;/h2&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/coturn/coturn 
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;coturn 
+./configure 
+make 
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;make &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;如果你的电脑上没有安装LibEvent2，需要先安装&lt;code class=&quot;highlighter-rouge&quot;&gt;libevent-devel&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Install the libevent-devel rpm package:&lt;/span&gt;
+yum &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;libevent-devel
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;安装好之后使用&lt;code class=&quot;highlighter-rouge&quot;&gt;which turnserver&lt;/code&gt;确保安装成功&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@localhost &lt;span class=&quot;nb&quot;&gt;local&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# which turnserver&lt;/span&gt;
+/usr/local/bin/turnserver
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;设置配置文件&quot;&gt;设置配置文件&lt;/h2&gt;
+&lt;p&gt;在Coturn编译完成好之后会自动生成一个配置文件的模板，在&lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/local/etc/turnserver.conf.default&lt;/code&gt;，感兴趣的小伙伴可以仔细查看里面每一个配置项的含义。这里我们在新建一个新的配置文件&lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/local/etc/turnserver.conf&lt;/code&gt;，在这个里面编辑好之后使用&lt;code class=&quot;highlighter-rouge&quot;&gt;turnserver&lt;/code&gt;命令会自动寻找到conf文件的位置。分享一个简单的配置文件的格式：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;relay-device=enp1s0f0  //外网网卡的设备号
+listening-ip=x.x.x.x //内网IP，没有填外网IP也可以
+listening-port=3478 
+relay-ip=x.x.x.x  //内网IP，没有填外网IP也可以
+external-ip=x.x.x.x  //外网IP
+relay-threads=500 
+lt-cred-mech 
+pidfile=”/var/run/turnserver.pid” 
+min-port=49152 
+max-port=65535 
+user=xxx:123456
+realm=AnHui
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;保存好之后使用命令&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;turnserver &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;即可启动Coturn。&lt;/p&gt;
+&lt;h2 id=&quot;验证coturn的可用性&quot;&gt;验证Coturn的可用性&lt;/h2&gt;
+&lt;p&gt;有一个专门的网站可以检查打洞服务器的正确配置与否。
+&lt;a href=&quot;https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/&quot;&gt;Trickle ICE&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;验证stun&quot;&gt;验证stun&lt;/h3&gt;
+&lt;p&gt;输入 &lt;code class=&quot;highlighter-rouge&quot;&gt;stun:x.x.x.x:3478&lt;/code&gt;
+得到结果&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Time	Component	Type	Foundation	Protocol	Address	Port	Priority
+0.002	1	host	886443856	udp	10.80.1.131	49469	126 | 32542 | 255
+0.104	1	host	2052453280	tcp	10.80.1.131	9	90 | 32542 | 255
+0.288	1	srflx	2643034245	udp	112.27.203.124	49469	100 | 32542 | 255
+0.312	Done
+0.313
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;看到&lt;code class=&quot;highlighter-rouge&quot;&gt;srflx&lt;/code&gt;后面就是你的电脑的外网IP，表示打洞成功。&lt;/p&gt;
+&lt;h3 id=&quot;验证turn&quot;&gt;验证turn&lt;/h3&gt;
+&lt;p&gt;输入 &lt;code class=&quot;highlighter-rouge&quot;&gt;turn:x.x.x.x:3478&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;username:&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;password&lt;/code&gt;
+得到结果&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0.003	1	host	886443856	udp	10.80.1.131	55831	126 | 32542 | 255
+0.104	1	host	2052453280	tcp	10.80.1.131	9	90 | 32542 | 255
+0.534	1	srflx	2643034245	udp	112.27.203.124	55831	100 | 32542 | 255
+0.614	1	relay	3676437432	udp	x.x.x.x	56631	2 | 32542 | 255
+0.878	Done
+0.880
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;看到&lt;code class=&quot;highlighter-rouge&quot;&gt;relay&lt;/code&gt;后面就是你的服务器的外网IP，表示可以使用Coturn的turn服务器进行转发。同时也可以看见srflx，这说明了turn服务是stun的一个拓展，turn和stun是包含的关系。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Coturn的部署就简单的介绍到这里，如有不对的地方，还望指正，谢谢！&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Sun, 14 Oct 2018 06:21:49 +0800</pubDate>
+        <link>https://cc976655.github.com/webrtc/2018/10/14/cenos7-install-coturn.html</link>
+        <guid isPermaLink="true">https://cc976655.github.com/webrtc/2018/10/14/cenos7-install-coturn.html</guid>
+        
+        <category>WebRtc</category>
+        
+        
+        <category>WebRtc</category>
+        
+      </item>
     
       <item>
         <title>Scala操作符学习笔记</title>
@@ -99,9 +222,9 @@ c
   &lt;p&gt;以上是我暂时总结的7种集合操作符，理解之后灵活运用可以节省很多时间，但是这些函数的使用都需要有lambda表达式的基础，今天写到这里，如果你发现了一些错误还望海涵，并严厉指出，不胜感激！&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
-        <pubDate>Mon, 09 Mar 2015 06:21:49 +0800</pubDate>
-        <link>http://localhost:4000/scala/2015/03/09/scala-learning.html</link>
-        <guid isPermaLink="true">http://localhost:4000/scala/2015/03/09/scala-learning.html</guid>
+        <pubDate>Tue, 02 Oct 2018 06:21:49 +0800</pubDate>
+        <link>https://cc976655.github.com/scala/2018/10/02/scala-learning.html</link>
+        <guid isPermaLink="true">https://cc976655.github.com/scala/2018/10/02/scala-learning.html</guid>
         
         <category>Scala</category>
         
