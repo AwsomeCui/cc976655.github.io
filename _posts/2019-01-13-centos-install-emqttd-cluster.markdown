@@ -7,7 +7,7 @@ tags: Emq
 ---
 ## 1.安装Docker
 由于yum默认是没有Docker源的，所以安装之前需要先安装Docker源，这一步参照[官方安装文档](https://docs.docker.com/install/linux/docker-ce/ubuntu/)，直接复制黏贴代码即可。
-```
+```bash
 # update yum package index（更新yum索引）
 sudo yum update
 # Install packages to allow yum to install docker（安装相关工具）
@@ -24,7 +24,7 @@ sudo yum update
 sudo yum install docker-ce
 ```
 朝上面在安装Docker源的那一步在天朝需要**科学上网**，**科学上网**，**科学上网**，说三遍。一番操作之后Docker应该是安装完成了，使用`docker version`命令，没有报错则安装成功。
-```
+```bash
 [root@localhost ~]# docker version
 Client:
  Version:           18.09.1
@@ -41,7 +41,7 @@ Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docke
 ## 2.使用Docker启动两个emqttd容器
 这里我在Docker hub（需要科学上网）找到了一个别人已经构建好的镜像[tldzyx/emqttd](https://hub.docker.com/r/tldzyx/emqttd)（访问需要科学上网）。
 我们拉下来只有后分别启动`emq1`和`emq2`的容器。
-```
+```bash
 # 下载镜像
 docker pull tldzyx/emqttd
 # 启动emq1节点($emqttd_img是刚才pull的emqttd镜像的ID，通过docker images查看)
@@ -52,7 +52,7 @@ docker run -tid --name emq2 $emqttd_img
 这样的话我们在docker中已经启动了两个emq节点，现在我们需要讲两个节点连接起来。
 首先我们先进入节点emq1中，查看emq1节点的地址。
 使用一下命令
-```
+```bash
 # 进入emq1节点中，相当于ssh登录到到了emq1虚拟机上
 sudo docker exec -it emq1 sh 
 # 查看节点地址
@@ -65,7 +65,7 @@ sudo emqttd_ctl status
 exit
 ```
 可以看到emq1节点的地址是`579193a0262d@172.17.0.2`，紧接着我们进入第二个节点emq2中，
-```
+```bash
 # 登录emq2
 sudo docker exec -it emq2 sh
 # 寻找emq1，是emq1加入集群
@@ -79,11 +79,11 @@ sudo emqttd_ctl cluster status
 
 ## 3.使用Haproxy负载均衡两个节点
 首先我们安装Haproxy
-```
+```bash
 sudo yum install -y haproxy
 ```
 紧接着我们使用利用这个拉取的镜像去构建一个我们自己的镜像。
-```
+```bash
 mkdir emqtt-haproxy-docker
 cd emqtt-haproxy-docker
 touch haproxy.cfg
@@ -124,7 +124,7 @@ backend emqtt-admin-backend
   server emq2 172.17.0.3:18083 check
 ```
 接下来我们使用一个Dockerfile来构建
-```
+```bash
 touch Dockerfile
 
 # 修改Dockerfile内容如下：
@@ -135,7 +135,7 @@ COPY haproxy.cfg /usr/local/etc/haproxy/haproxy.cfg >> Dockerfile
 docker build -t emqtt-haproxy .
 ```
 这样我们使用`sudo docker ps`可以查看到我们刚才构建好的镜像,即`emqtt-haproxy`
-```
+```bash
 [root@localhost ~]# docker  images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 emqtt-haproxy       latest              249538bcbccb        12 hours ago        72MB
@@ -147,7 +147,7 @@ tldzyx/emqttd       latest              6e7f1fc919fb        8 months ago        
 boldt/coturn        latest              2c927afe2958        17 months ago       189MB
 ```
 下面来尝试启动代理服务器来负载均衡两个节点
-```
+```bash
 docker run -it --rm --name haproxy-syntax-check emqtt-haproxy haproxy -c -f /usr/local/etc/haproxy/haproxy.cfg
 
 # 请指定端口映射1833是tcp服务，18083是管理员界面dashboard
