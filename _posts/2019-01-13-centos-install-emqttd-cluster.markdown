@@ -6,11 +6,11 @@ categories: Emq
 tags: Emq
 ---
 ## 1.安装Docker
-由于apt默认是没有Docker源的，所以安装之前需要先安装Docker源，这一步参照[官方安装文档](https://docs.docker.com/install/linux/docker-ce/ubuntu/)，直接复制黏贴代码即可。
+由于yum默认是没有Docker源的，所以安装之前需要先安装Docker源，这一步参照[官方安装文档](https://docs.docker.com/install/linux/docker-ce/ubuntu/)，直接复制黏贴代码即可。
 ```
 # update yum package index（更新yum索引）
 sudo yum update
-# Install packages to allow apt to use a repository over HTTPS（安装相关工具）
+# Install packages to allow yum to install docker（安装相关工具）
 sudo yum install -y yum-utils \
   device-mapper-persistent-data \
   lvm2
