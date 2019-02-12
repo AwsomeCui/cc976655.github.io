@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Scala操作符学习笔记"
+title:  "Scal常用算子学习"
 date:   2018-10-01 22:21:49
 categories: Scala
 tags: Scala
