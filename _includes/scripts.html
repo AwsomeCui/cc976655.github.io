@@ -4,6 +4,20 @@
 <script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
 
 {% if site.google_analytics %}
+<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDcQs-flAiyjb5VCfHB-jGDgBOoBB3bn-U",
+    authDomain: "jjreader-94256.firebaseapp.com",
+    databaseURL: "https://jjreader-94256.firebaseio.com",
+    projectId: "jjreader-94256",
+    storageBucket: "jjreader-94256.appspot.com",
+    messagingSenderId: "606517984773"
+  };
+  firebase.initializeApp(config);
+</script>
+<!--
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -13,4 +27,5 @@
   ga('create', '{{ site.google_analytics }}', 'auto');
   ga('send', 'pageview');
 </script>
+-->
 {% endif %}
