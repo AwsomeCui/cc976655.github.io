@@ -6,7 +6,6 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://cc976655.github.com" # the base hostname & protocol for your site
 
-
 # Sidebar filter
 # Choose 'tag' or 'category' as filter in sidebar.
 filter: 'tag'
