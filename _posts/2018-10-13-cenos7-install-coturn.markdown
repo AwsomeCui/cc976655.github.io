@@ -29,17 +29,17 @@ yum install libevent-devel
 ## 设置配置文件
 在Coturn编译完成好之后会自动生成一个配置文件的模板，在`/usr/local/etc/turnserver.conf.default`，感兴趣的小伙伴可以仔细查看里面每一个配置项的含义。这里我们在新建一个新的配置文件`/usr/local/etc/turnserver.conf`，在这个里面编辑好之后使用`turnserver`命令会自动寻找到conf文件的位置。分享一个简单的配置文件的格式：
 ```
-relay-device=enp1s0f0  //外网网卡的设备号
-listening-ip=x.x.x.x //内网IP，没有填外网IP也可以
+relay-device=enp1s0f0  //绑定的网卡的设备号
+listening-ip=x.x.x.x //内网IP，阿里云腾讯云的机器一般是内网的IP，没有填外网IP也可以
 listening-port=3478 
-relay-ip=x.x.x.x  //内网IP，没有填外网IP也可以
+relay-ip=x.x.x.x  //外网IP，就是外网访问本台服务器的IP地址，这个就是提供给webrtc客户端来传递数据的IP
 external-ip=x.x.x.x  //外网IP
 relay-threads=500 
-lt-cred-mech 
-pidfile=”/var/run/turnserver.pid” 
-min-port=49152 
+lt-cred-mech    //这个要填上，否则不支持webrtc
+pidfile="/var/run/turnserver.pid" 
+min-port=49152  //虚拟给客户端的端口号，min-max的范围选取要能支撑起你的服务，要不然会出现转发服务器不够用的情况
 max-port=65535 
-user=xxx:123456
+user=xxx:123456     //xxx会用户名，123456是密码
 realm=AnHui
 ```
 保存好之后使用命令
