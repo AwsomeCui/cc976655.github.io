@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Scal常用算子学习"
+title:  "Scala常用算子学习"
 date:   2018-10-01 22:21:49
 tags: Scala
 ---

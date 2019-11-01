@@ -4,7 +4,6 @@ title:  "Centos7安装WebRtc打洞服务器Coturn方法"
 date:   2018-10-13 22:21:49
 tags: WebRtc
 ---
-# Centos7安装WebRtc打洞服务器Coturn方法
 > 在使用WebRtc时，我们需要打洞服务器来打洞两部设备之间的通信，这里我们采用Coturn库。由于Turn服务器是Stun的一个拓展，Coturn包括了Turn和Stun，所有我们只需要部署Coturn就可以完成WebRtc的打洞环节啦。
 
 ## 克隆并安装
