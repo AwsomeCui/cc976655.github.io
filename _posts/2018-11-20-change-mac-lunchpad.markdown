@@ -2,7 +2,6 @@
 layout: post
 title:  "macOS调整LaunchPad图标大小"
 date:   2018-11-20 12:30:30
-categories: macOS
 tags: Tools
 ---
 > macOS的Launchpad默认图标很大，看起来很不美观，下面是调整图标大小的方法。

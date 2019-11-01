@@ -2,7 +2,6 @@
 layout: post
 title:  "在CentOS7上使用Docker和Haproxy部署Emq集群"
 date:   2019-01-13 22:51:49
-categories: Emq
 tags: Emq
 ---
 ## 1.安装Docker

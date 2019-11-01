@@ -2,7 +2,6 @@
 layout: post
 title:  "分享一些自己做菜"
 date:   2018-11-17 23:58:49
-categories: Food
 tags: Life
 ---
 ## 喜欢做菜

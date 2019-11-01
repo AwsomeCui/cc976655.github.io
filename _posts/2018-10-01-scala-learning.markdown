@@ -2,7 +2,6 @@
 layout: post
 title:  "Scal常用算子学习"
 date:   2018-10-01 22:21:49
-categories: Scala
 tags: Scala
 ---
 > `Scala`中很多的集合操作符，学会了他们在平时的编程中可以节约很多的时间。这其中的一些操作和`RxJava`中的一些操作符十分相似。

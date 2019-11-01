@@ -1,35 +1,44 @@
-# Site settings
+# Basic
 title: 崔仪洁的博客
-email: cyj976655@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  崔仪洁的博客，记录生活的点点滴滴。
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://cc976655.github.com" # the base hostname & protocol for your site
+#subtitle: 念念不忘，必有回响。
+welcome_message: 念念不忘，必有回响。
+description: 崔仪洁的博客，记录生活的点点滴滴。所谓青春已逝，大概就是当风雨来时，抬头一看，已无屋檐。低头一看，自己已成屋檐的时候吧。
+creator: <a href="https://cuje.tk">@cuje</a>
 
-# Sidebar filter
-# Choose 'tag' or 'category' as filter in sidebar.
-filter: 'tag'
+url: "https://cc976655.github.com"
 
+permalink: /:year/:month/:day/:title.html
 
-# Social account
-# twitter:  username
-# weibo:    ID
-github:   cc976655
-# codepen:  username
-# dribbble: username
+# Format
+highlighter: rouge
 
+# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
+cover_color: red
+
+blog_button:
+    title: 博客
+    description: 访问博客
+
+nav:
+    #- {title: 简历, description: 我的简历, url: '//onev.cat'}
+    #- {title: 工具, description: 我所使用的 app 们, url: '/apps'}
+# Pagination
+plugins: [jekyll-paginate]
+paginate: 20
+paginate_path: "page/:num/"
 
 # Comment
-disqus_shortname: cuje
-
+comment:
+    disqus: cuje
+    # duoshuo:
+# Social
+social:
+    weibo: cc976655
+    github: cc976655
+    gplus: 107108267983477358170
+    mail: cyj976655@gmail.com
 
 # Google Analytics
-google_analytics: UA-139193914-1
-
-
-# Build settings
-markdown: kramdown
-sass:
-  style: compressed
-plugins:
-  - jekyll-sitemap
+ga:
+    id: UA-139193914-1
+    host: cuje.tk

@@ -2,7 +2,6 @@
 layout: post
 title:  "Centos7安装WebRtc打洞服务器Coturn方法"
 date:   2018-10-13 22:21:49
-categories: WebRtc
 tags: WebRtc
 ---
 # Centos7安装WebRtc打洞服务器Coturn方法
