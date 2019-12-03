@@ -14,10 +14,10 @@ cd coturn
 make 
 sudo make install
 ```
-如果你的电脑上没有安装LibEvent2，需要先安装`libevent-devel`
+如果你的电脑上没有安装LibEvent2，需要先安装`libevent-devel`和`openssl-devel`
 ```bash
 # Install the libevent-devel rpm package:
-yum install libevent-devel
+yum install libevent-devel openssl-devel
 ```
 安装好之后使用`which turnserver`确保安装成功
 ```bash
