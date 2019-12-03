@@ -30,8 +30,8 @@ yum install libevent-devel
 relay-device=enp1s0f0  //绑定的网卡的设备号
 listening-ip=x.x.x.x //内网IP，阿里云腾讯云的机器一般是内网的IP，没有填外网IP也可以
 listening-port=3478 
-relay-ip=x.x.x.x  //外网IP，就是外网访问本台服务器的IP地址，这个就是提供给webrtc客户端来传递数据的IP
-external-ip=x.x.x.x  //外网IP
+relay-ip=x.x.x.x  //内网IP,阿里云腾讯云的机器一般是内网的IP，没有填外网IP也可以
+external-ip=x.x.x.x  //外网IP，就是外网访问本台服务器的IP地址，这个就是提供给webrtc客户端来传递数据的IP
 relay-threads=500 
 lt-cred-mech    //这个要填上，否则不支持webrtc
 pidfile="/var/run/turnserver.pid" 
