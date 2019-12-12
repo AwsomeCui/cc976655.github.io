@@ -41,7 +41,7 @@ private static int[] selectionSort(int[] toSort) {
 ```
 冒泡排序的思想就是依次拿数组中的每个元素去和他后面的每个元素进行对比，如果当前元素大于他后面的元素就置换一下。这样就可以保证第一遍运行的时候最大的那个数置换到了数组的最后面，第二遍运行的时候第二大的数字被换到了倒数第二的位置，依次类推，当执行完整个遍历的时候，数组就是按照从小到大排序的了。
 
-![bubbleSort](/asset/img/sort/bubbleSort.png)
+![bubbleSort](/assets/img/sort/bubbleSort.png)
 
 ## 2.选择排序
 
