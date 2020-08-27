@@ -41,3 +41,5 @@ social:
 ga:
     id: UA-139193914-1
     host: cuje.tk
+
+theme: jekyll-theme-cayman
